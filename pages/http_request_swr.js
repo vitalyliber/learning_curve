@@ -1,6 +1,7 @@
 // https://swr.vercel.app/
 import useSWR from "swr";
 
+// page url: http://localhost:3000/api/hello
 const HttpRequestSwr = () => {
   const { data, error } = useSWR("user_info", () =>
     fetch("/api/hello").then((el) => el.json())
