@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const HooksArray = () => {
   const [list, setList] = useState([]);
   const [value, setValue] = useState("");
   const [id, setId] = useState(0);
+  useEffect(() => console.log(id), [id]);
+  useEffect(() => console.log(list[list.length - 1]), [list]);
   return (
     <div>
       <input value={value} onChange={(e) => setValue(e.target.value)} />
@@ -19,7 +21,7 @@ const HooksArray = () => {
       </button>
       {list.map(({ id, value }) => {
         return (
-          <div style={{ flexDirection: "row", display: "flex" }}>
+          <div key={id} style={{ flexDirection: "row", display: "flex" }}>
             <div>el: {value}</div>
             <div
               style={{
