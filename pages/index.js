@@ -16,7 +16,7 @@ export default function Home() {
       >
         {[
           "hooks",
-          "hooks_array",
+          "hooks_arrays",
           "hooks_effect",
           "hooks_memo",
           "http_request",
