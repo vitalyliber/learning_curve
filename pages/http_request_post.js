@@ -15,8 +15,11 @@ const Hooks = () => {
               },
               body: JSON.stringify({ message: value }),
             });
-            let result = await response.json();
-            alert(result.status);
+            console.log('Response Status: ', response.status)
+            // JSON.parse(response.body)
+            let data = await response.json();
+            // show data from server
+            alert(data.status);
             setValue("");
           } catch (e) {
             alert("Error!");
