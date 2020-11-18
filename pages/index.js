@@ -23,6 +23,7 @@ export default function Home() {
           "http_request_post",
           "http_request_swr",
           "http_request_list",
+          "css_flexboxes"
         ].map((name) => {
           return (
             <Link href={`/${name}`}>
