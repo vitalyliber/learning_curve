@@ -1,10 +1,10 @@
-const FlexCard = ({ title }) => {
+const FlexCard = ({ title, data, info }) => {
   return (
     <div className="container">
       <div>{title}</div>
       <div>
-        <div>10.10.2020</div>
-        <div>Some info...</div>
+        <div>{data}</div>
+        <div>{info}</div>
       </div>
 
       <style jsx>{`

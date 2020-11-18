@@ -4,11 +4,13 @@ const CssFlexboxes = () => {
   return (
     <div className="container">
       <div className="column">
-        {[{ title: "First" }, { title: "Second" }, { title: "Third" }].map(
-          (el) => (
-            <FlexCard {...el} />
-          )
-        )}
+        {[
+          { title: "First", data: "8.10.2020" },
+          { title: "Second", data: "9.10.2020" },
+          { title: "Third", data: "10.10.2020" },
+        ].map((el) => (
+          <FlexCard {...el} info="From Thailand" />
+        ))}
       </div>
 
       <style jsx>{`
